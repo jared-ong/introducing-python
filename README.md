@@ -1,3 +1,5 @@
+NOTE: Code originally sourced from https://github.com/madscheme/introducing-python.  Most examples come directly from the O'Reilly introducing Python book "Modern Computing in Simple Packages". I forked this code as I am trying to help my team learn python and need updated examples.  Since original repository is out of date and not accepting new PRs, I forked the repo.
+
 Introducing Python
 =================
 
