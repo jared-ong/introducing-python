@@ -154,6 +154,13 @@ x = ord('A')
 print(x)
 
 
+#Let's look at SQL jobs on a SQL server jobID is actually a Hex value look in ApplicationName column of dbamon.dbo.trace
+# select * from dbamon.dbo.trace
+# select * from msdb.dbo.sysjobs where job_id = 0x0EBD4F3BC1C8A64D82D698F7E6AA9E67
+# select CAST(0x0EBD4F3BC1C8A64D82D698F7E6AA9E67 AS UNIQUEIDENTIFIER) AS Job_Unique_ID
+x = 0x0EBD4F3BC1C8A64D82D698F7E6AA9E67
+print(x)
+
 
 # Type conversions
 # int() - in Python 2 int was -2,147,483,648 to 2,147,483,648 but in Python 3 an int can be any size including a googol (one followed by 100 zeroes, named in 1920 by a 9 year old boy.
