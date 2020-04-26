@@ -45,7 +45,7 @@ print(my_dictionary)
 print("Dosage is:", my_dictionary["Dosage"])
 
 # If key is not present you will get an exception
-print(my_dictionary["Trial"])
+# print(my_dictionary["Trial"])
 
 # Two ways to avoid this error use an if condition to check if key exists before referencing
 if "Trial" in my_dictionary:
@@ -101,6 +101,12 @@ print(dict1)
 # Delete an item by key
 del dict1["Member4"]
 
+# Dictionary comprehensions
+# Format like this {key_expression: value_expression for expression in iterable}
+word = "letters"
+letter_counts = {letter: word.count(letter) for letter in word}
+letter_counts
+
 # Sets https://www.geeksforgeeks.org/sets-in-python/
 # Sets in Python
 # A Set is an unordered collection data type that is iterable,
@@ -111,3 +117,37 @@ del dict1["Member4"]
 # This is based on a data structure known as a hash table.
 # Since sets are unordered, we cannot access items using indexes
 # like we do in lists.
+
+empty_set = set()
+even_numbers = {0,2,4,6,8}
+odd_numbers = {1,3,5,7,9}
+# Get length with len()
+len(odd_numbers)
+
+# Add and item with add()
+odd_numbers.add(11)
+print(odd_numbers)
+
+# Remove an item by value remove()
+odd_numbers.remove(3)
+print(odd_numbers)
+set1 = {"Joe","John","Jeff","Sally","Sue"}
+set2 = {"John","Sue","Wally","Bob","Jane"}
+
+# Intersection operator, similar to inner joinn
+print(set1 & set2)
+print(set1.intersection(set2))
+
+# Union (members of each set)
+print(set1 | set2)
+print(set1.union(set2))
+
+# Difference between the two sets
+print(set1 ^ set2)
+print(set1.symmetric_difference(set2))
+
+# Set comprehension
+# Format like {expression for expression in iterable}
+# It can have the optional condition tests {expression for expression in iterable if condition}
+a_set = {number for number in range(1,6) if number % 3 == 1}
+print(a_set)
